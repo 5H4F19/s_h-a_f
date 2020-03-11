@@ -1,0 +1,43 @@
+#include<stdio.h>
+float as(float a,float b){
+	float s=a+b;
+	return s;
+}
+float ap(float a,float b){
+	float s=(a*b)/(a+b);
+	return s;
+}
+
+
+int main(){
+	 int a,b,c;
+	 float s1,T;
+	 char ch;
+	 printf("Instruction:\nInput number as follows\n 4s5p6s7 \nFor end of input press b and any other key.\n");
+	 printf ("\n\n\t\tResistance meter\n------------------------------------------------\n");
+	 scanf("%d %c %d",&a,&ch,&b);
+	 if(ch=='+'){
+	 	s1=as(a,b);
+	 }
+	 else if(ch=='|'){
+	 	s1=ap(a,b);
+	 }
+	 while(1){
+	 
+	 	scanf("%c",&ch);
+	 	if(ch=='b') break;
+	 	scanf("%d",&c);
+	 	
+	 	if(ch=='+'){
+	 		T=as(s1,c);
+	 		s1=T;
+	 	}
+	 	else if(ch=='|'){
+	 		T=ap(s1,c);
+	 		s1=T;
+	 	}
+	 	
+	 }
+	 printf("Total registance = %f",T);
+	 return 0;
+}

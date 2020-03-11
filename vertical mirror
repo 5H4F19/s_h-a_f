@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	char array[10];
+	int L;
+	scanf("%s",&array);
+	L=strlen(array);
+	while(L>=0){
+		printf("%c",array[L-1]);
+		L--;
+	}
+	
+	
+	return 0;
+}
